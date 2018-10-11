@@ -106,7 +106,7 @@ class HealthCare:
                 self._databaseClient.insert(result['disease'], result['details'],
                 result['selfcare'], result['medications'], result['specialists'])
         
-        result['status': 'ok']
+        result['status'] = 'ok'
 
         return result
 
@@ -115,7 +115,6 @@ class HealthCare:
 
         # Concatenate all symptoms present in text
         for symptom in self.availableSymptoms:
-            print(symptom['Name'])
             if symptom['Name'].lower() in text.lower():
                 found_symptoms += ' ' + str(symptom['ID'])
 
